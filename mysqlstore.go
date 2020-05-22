@@ -42,6 +42,18 @@ type sessionRow struct {
 
 func init() {
 	gob.Register(time.Time{})
+    log.Print(`
+ _                   ______  _   _  _____  _____  _
+| |                  |  _  \| \ | ||  ___||_   _|| |
+| |__    ___  _   _  | | | ||  \| || |__    | |  | |
+| '_ \  / _ \| | | | | | | || .   ||  __|   | |  | |
+| | | ||  __/| |_| | | |/ / | |\  || |___   | |  |_|
+|_| |_| \___| \__, | |___/  \_| \_/\____/   \_/  (_)
+               __/ |
+              |___/
+you should stop using github.com/joboscribe/mysqlstore
+and starting using github.com/srinathgs/mysqlstore
+`)
 }
 
 func NewMySQLStore(endpoint string, tableName string, path string, maxAge int, keyPairs ...[]byte) (*MySQLStore, error) {
